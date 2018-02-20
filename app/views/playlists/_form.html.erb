@@ -15,11 +15,13 @@
     <%= form.label :name %>
     <%= form.text_field :name, id: :playlist_name %>
   </div>
-
+  
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id, id: :playlist_user_id %>
-  </div>
+  <%= form.label :user_id %>
+  <%= form.select :user_id, @usuarios.collect{|x| [x.name, x.id]}, id: :playlist_user_id, prompt: "Seleccione Usuario" %>
+</div>
+
+  
 
   <div class="actions">
     <%= form.submit %>

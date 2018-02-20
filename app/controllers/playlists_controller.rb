@@ -14,6 +14,7 @@ class PlaylistsController < ApplicationController
 
   # GET /playlists/new
   def new
+    @usuarios = User.all
     @playlist = Playlist.new
   end
 
