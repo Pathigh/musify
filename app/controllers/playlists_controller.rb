@@ -13,6 +13,7 @@ class PlaylistsController < ApplicationController
     
     @song = Song.new
     @canciones = Song.all
+    
   end
 
   # GET /playlists/new

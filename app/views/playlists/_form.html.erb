@@ -18,12 +18,12 @@
   
   <div class="field">
   <%= form.label :user_id %>
-  <%= form.select :user_id, @usuarios.collect{|x| [x.name, x.id]}, id: :playlist_user_id, prompt: "Seleccione Usuario" %>
+  <%= form.select :user_id, User.all.collect{|x| [x.name, x.id]}, id: :playlist_user_id, prompt: "Seleccione un usuario" %>
 </div>
 
   
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Crear List', class: "btn btn-success"  %>
   </div>
 <% end %>
